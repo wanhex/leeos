@@ -20,6 +20,9 @@ __vector_data_abort:
 __vector_reserved:
     nop
 __vector_irq:
-    nop
+    sub r14,r14,#4
+    stmfd r13!,{r0-r3,r14}
+    bl common_irq_handler
+    ldmfd r13!,{r0-r3,pc}^
 __vector_fiq:
     nop

@@ -7,7 +7,7 @@ ASFLAGS= -O2 -g
 
 LDFLAGS= -Tleeos.lds -Ttext 30000000 
 
-OBJS=init.o start.o boot.o abnormal.o mmu.o print.o
+OBJS=init.o start.o boot.o abnormal.o mmu.o print.o interrupt.o
 
 .c.o:
 	$(CC) $(CFLAGS) -c $<
