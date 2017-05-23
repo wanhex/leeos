@@ -25,10 +25,12 @@ leeos是《一步步写嵌入式操作系统》书中所实现的操作系统。
 
 ```
 $ ./configure
+#make前需要将.../skyeye/third-party/opcodes/cgen-ops.h 315行修改为 #ifndef SEMOPS_DEFINE_INLINE
 $ make lib
 $ make
 $ make install_lib
 $ make install
+```
 ```
 
 安装完成后，skyeye命令路径为：/opt/skyeye/bin/skyeye_main.py
